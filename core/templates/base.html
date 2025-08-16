@@ -1,0 +1,44 @@
+<!-- Base layout: Tailwind CDN, navbar, blocks for pages (placeholder) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{% block title %}ResumeTutor{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <header
+      class="sticky top-0 backdrop-blur bg-slate-900/70 border-b border-slate-800"
+    >
+      <nav
+        class="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between"
+      >
+        <a href="/" class="font-semibold text-lg">ResumeTutor</a>
+        <div class="flex gap-3 items-center">
+          {% if user.is_authenticated %}
+          <span class="text-sm opacity-80">Hi, {{ user.username }}</span>
+          <a
+            class="px-3 py-1 rounded border border-slate-600"
+            href="/accounts/logout/"
+            >Logout</a
+          >
+          {% else %}
+          <a
+            class="px-3 py-1 rounded border border-slate-600"
+            href="/accounts/login/"
+            >Login</a
+          >
+          <a class="px-3 py-1 rounded bg-indigo-600" href="/accounts/signup/"
+            >Sign up</a
+          >
+          {% endif %}
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-8">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

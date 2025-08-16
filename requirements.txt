@@ -1,0 +1,2 @@
+# List your Python dependencies here (e.g., django, spacy, sentence-transformers, etc.).
+# For now, this file is intentionally left with comments only.

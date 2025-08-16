@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Home — ResumeTutor{% endblock %}
+
+{% block content %}
+  <h1 class="text-2xl font-semibold mb-2">Welcome to ResumeTutor</h1>
+  <p class="opacity-80 mb-6">
+    Use the nav to log in or sign up. This confirms URLs and templates are wired.
+  </p>
+  <ul class="list-disc pl-6 space-y-1 text-slate-300">
+    <li><a class="underline" href="{% url 'account_signup' %}">Create an account</a></li>
+    <li><a class="underline" href="{% url 'account_login' %}">Log in</a></li>
+  </ul>
+{% endblock %}

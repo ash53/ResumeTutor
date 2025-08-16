@@ -1,0 +1,8 @@
+# Typical entries (commented on purpose per request):
+# /venv
+# __pycache__/
+# *.pyc
+# .env
+# /media
+# /staticfiles
+# node_modules/
